@@ -1,0 +1,17 @@
+# Sistema operativo / OneDrive
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Dependencias
+node_modules/
+
+# Variables de entorno (secretos)
+.env
+.env.*
+
+# Editor
+.vscode/
+
+# Logs
+*.log
