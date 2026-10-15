@@ -1,0 +1,37 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-14T02:46:00Z"},
+  "title": "Moto · Detalle y formulario",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 390, "h": 844, "title": "1 · Moto · Detalle · Celular"},
+    "DetallePC.dc.html": {"x": 470, "y": 0, "w": 1440, "h": 900, "title": "1 · Moto · Detalle · Computadora"},
+    "SinChoferCel.dc.html": {"x": 0, "y": 1020, "w": 390, "h": 844, "title": "2 · Moto sin chofer · Detalle · Celular"},
+    "SinChoferPC.dc.html": {"x": 470, "y": 1020, "w": 1440, "h": 900, "title": "2 · Moto sin chofer · Detalle · Computadora"},
+    "ElegirChoferCel.dc.html": {"x": 0, "y": 2040, "w": 390, "h": 844, "title": "3 · Elegir chofer · Celular"},
+    "ElegirChoferPC.dc.html": {"x": 470, "y": 2040, "w": 1440, "h": 900, "title": "3 · Elegir chofer · Computadora"},
+    "RegistrarCel.dc.html": {"x": 0, "y": 3060, "w": 390, "h": 844, "title": "4 · Registrar moto · Celular"},
+    "RegistrarPC.dc.html": {"x": 470, "y": 3060, "w": 1440, "h": 900, "title": "4 · Registrar moto · Computadora"},
+    "CorregirCel.dc.html": {"x": 0, "y": 4080, "w": 390, "h": 844, "title": "5 · Corregir moto · Celular"},
+    "CorregirPC.dc.html": {"x": 470, "y": 4080, "w": 1440, "h": 900, "title": "5 · Corregir moto · Computadora"},
+    "ErrorPlacaVaciaCel.dc.html": {"x": 0, "y": 5100, "w": 390, "h": 844, "title": "6a · Registrar moto · Error placa vacía · Celular"},
+    "ErrorPlacaVaciaPC.dc.html": {"x": 470, "y": 5100, "w": 1440, "h": 900, "title": "6a · Registrar moto · Error placa vacía · Computadora"},
+    "ErrorPlacaRepetidaCel.dc.html": {"x": 0, "y": 6120, "w": 390, "h": 844, "title": "6b · Registrar moto · Error placa repetida · Celular"},
+    "ErrorPlacaRepetidaPC.dc.html": {"x": 470, "y": 6120, "w": 1440, "h": 900, "title": "6b · Registrar moto · Error placa repetida · Computadora"},
+    "MotoRegistradaCel.dc.html": {"x": 0, "y": 7140, "w": 390, "h": 844, "title": "7 · Moto registrada · Aviso · Celular"},
+    "MotoRegistradaPC.dc.html": {"x": 470, "y": 7140, "w": 1440, "h": 900, "title": "7 · Moto registrada · Aviso · Computadora"}
+  },
+  "order": [
+    "Main.dc.html", "DetallePC.dc.html",
+    "SinChoferCel.dc.html", "SinChoferPC.dc.html",
+    "ElegirChoferCel.dc.html", "ElegirChoferPC.dc.html",
+    "RegistrarCel.dc.html", "RegistrarPC.dc.html",
+    "CorregirCel.dc.html", "CorregirPC.dc.html",
+    "ErrorPlacaVaciaCel.dc.html", "ErrorPlacaVaciaPC.dc.html",
+    "ErrorPlacaRepetidaCel.dc.html", "ErrorPlacaRepetidaPC.dc.html",
+    "MotoRegistradaCel.dc.html", "MotoRegistradaPC.dc.html"
+  ],
+  "notes": {},
+  "designSystems": []
+}

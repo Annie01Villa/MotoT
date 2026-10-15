@@ -1,0 +1,170 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-14T16:10:00Z"
+  },
+  "title": "Usuarios",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "1 · Usuarios · Vista Gerente · Celular"
+    },
+    "ListaPC.dc.html": {
+      "x": 470,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "1 · Usuarios · Vista Gerente · Computadora"
+    },
+    "MenuCel.dc.html": {
+      "x": 0,
+      "y": 1020,
+      "w": 390,
+      "h": 844,
+      "title": "1b · Usuarios · Vista Gerente · Menú de acciones · Celular"
+    },
+    "AyudanteCel.dc.html": {
+      "x": 0,
+      "y": 2040,
+      "w": 390,
+      "h": 844,
+      "title": "2 · Usuarios · Vista Ayudante · Celular"
+    },
+    "AyudantePC.dc.html": {
+      "x": 470,
+      "y": 2040,
+      "w": 1440,
+      "h": 900,
+      "title": "2 · Usuarios · Vista Ayudante · Computadora"
+    },
+    "AltaCel.dc.html": {
+      "x": 0,
+      "y": 3060,
+      "w": 390,
+      "h": 844,
+      "title": "3 · Dar de alta usuario · Celular"
+    },
+    "AltaPC.dc.html": {
+      "x": 470,
+      "y": 3060,
+      "w": 1440,
+      "h": 900,
+      "title": "3 · Dar de alta usuario · Computadora"
+    },
+    "ErroresCel.dc.html": {
+      "x": 0,
+      "y": 4080,
+      "w": 390,
+      "h": 844,
+      "title": "4a · Dar de alta usuario · Con errores · Celular"
+    },
+    "ErroresPC.dc.html": {
+      "x": 470,
+      "y": 4080,
+      "w": 1440,
+      "h": 900,
+      "title": "4a · Dar de alta usuario · Con errores · Computadora"
+    },
+    "RepetidoCel.dc.html": {
+      "x": 0,
+      "y": 5100,
+      "w": 390,
+      "h": 844,
+      "title": "4b · Dar de alta usuario · Correo repetido · Celular"
+    },
+    "RepetidoPC.dc.html": {
+      "x": 470,
+      "y": 5100,
+      "w": 1440,
+      "h": 900,
+      "title": "4b · Dar de alta usuario · Correo repetido · Computadora"
+    },
+    "BajaCel.dc.html": {
+      "x": 0,
+      "y": 6120,
+      "w": 390,
+      "h": 844,
+      "title": "5 · Confirmar baja · Celular"
+    },
+    "BajaPC.dc.html": {
+      "x": 470,
+      "y": 6120,
+      "w": 1440,
+      "h": 900,
+      "title": "5 · Confirmar baja · Computadora"
+    },
+    "AltaAvisoCel.dc.html": {
+      "x": 0,
+      "y": 7140,
+      "w": 390,
+      "h": 844,
+      "title": "6a · Aviso · Usuario dado de alta · Celular"
+    },
+    "AltaAvisoPC.dc.html": {
+      "x": 470,
+      "y": 7140,
+      "w": 1440,
+      "h": 900,
+      "title": "6a · Aviso · Usuario dado de alta · Computadora"
+    },
+    "BajaAvisoCel.dc.html": {
+      "x": 0,
+      "y": 8160,
+      "w": 390,
+      "h": 844,
+      "title": "6b · Aviso · Usuario dado de baja · Celular"
+    },
+    "BajaAvisoPC.dc.html": {
+      "x": 470,
+      "y": 8160,
+      "w": 1440,
+      "h": 900,
+      "title": "6b · Aviso · Usuario dado de baja · Computadora"
+    },
+    "SinResultadosCel.dc.html": {
+      "x": 0,
+      "y": 9180,
+      "w": 390,
+      "h": 844,
+      "title": "7 · Usuarios · Sin resultados · Celular"
+    },
+    "SinResultadosPC.dc.html": {
+      "x": 470,
+      "y": 9180,
+      "w": 1440,
+      "h": 900,
+      "title": "7 · Usuarios · Sin resultados · Computadora"
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "ListaPC.dc.html",
+    "MenuCel.dc.html",
+    "AyudanteCel.dc.html",
+    "AyudantePC.dc.html",
+    "AltaCel.dc.html",
+    "AltaPC.dc.html",
+    "ErroresCel.dc.html",
+    "ErroresPC.dc.html",
+    "RepetidoCel.dc.html",
+    "RepetidoPC.dc.html",
+    "BajaCel.dc.html",
+    "BajaPC.dc.html",
+    "AltaAvisoCel.dc.html",
+    "AltaAvisoPC.dc.html",
+    "BajaAvisoCel.dc.html",
+    "BajaAvisoPC.dc.html",
+    "SinResultadosCel.dc.html",
+    "SinResultadosPC.dc.html"
+  ],
+  "notes": {},
+  "designSystems": []
+}

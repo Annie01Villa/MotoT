@@ -1,0 +1,40 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-14T04:20:00Z"},
+  "title": "Financiamiento",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 390, "h": 844, "title": "1 · Financiamiento · Lista · Celular"},
+    "ListaPC.dc.html": {"x": 470, "y": 0, "w": 1440, "h": 900, "title": "1 · Financiamiento · Lista · Computadora"},
+    "SinResultadosCel.dc.html": {"x": 0, "y": 1020, "w": 390, "h": 844, "title": "2a · Financiamiento · Sin resultados · Celular"},
+    "SinResultadosPC.dc.html": {"x": 470, "y": 1020, "w": 1440, "h": 900, "title": "2a · Financiamiento · Sin resultados · Computadora"},
+    "VaciaCel.dc.html": {"x": 0, "y": 2040, "w": 390, "h": 844, "title": "2b · Financiamiento · Lista vacía · Celular"},
+    "VaciaPC.dc.html": {"x": 470, "y": 2040, "w": 1440, "h": 900, "title": "2b · Financiamiento · Lista vacía · Computadora"},
+    "DetalleCel.dc.html": {"x": 0, "y": 3060, "w": 390, "h": 844, "title": "3 · Financiamiento · Detalle · Celular"},
+    "DetallePC.dc.html": {"x": 470, "y": 3060, "w": 1440, "h": 900, "title": "3 · Financiamiento · Detalle · Computadora"},
+    "RegistrarCel.dc.html": {"x": 0, "y": 4080, "w": 390, "h": 844, "title": "4 · Financiamiento · Registrar · Celular"},
+    "RegistrarPC.dc.html": {"x": 470, "y": 4080, "w": 1440, "h": 900, "title": "4 · Financiamiento · Registrar · Computadora"},
+    "FechaCel.dc.html": {"x": 0, "y": 5100, "w": 390, "h": 844, "title": "4b · Financiamiento · Registrar · Elegir fecha · Celular"},
+    "FechaPC.dc.html": {"x": 470, "y": 5100, "w": 1440, "h": 900, "title": "4b · Financiamiento · Registrar · Elegir fecha · Computadora"},
+    "CorregirCel.dc.html": {"x": 0, "y": 6120, "w": 390, "h": 844, "title": "5 · Financiamiento · Corregir · Celular"},
+    "CorregirPC.dc.html": {"x": 470, "y": 6120, "w": 1440, "h": 900, "title": "5 · Financiamiento · Corregir · Computadora"},
+    "ErroresCel.dc.html": {"x": 0, "y": 7140, "w": 390, "h": 844, "title": "6 · Financiamiento · Con errores · Celular"},
+    "ErroresPC.dc.html": {"x": 470, "y": 7140, "w": 1440, "h": 900, "title": "6 · Financiamiento · Con errores · Computadora"},
+    "RegistradoCel.dc.html": {"x": 0, "y": 8160, "w": 390, "h": 844, "title": "7 · Financiamiento registrado · Aviso · Celular"},
+    "RegistradoPC.dc.html": {"x": 470, "y": 8160, "w": 1440, "h": 900, "title": "7 · Financiamiento registrado · Aviso · Computadora"}
+  },
+  "order": [
+    "Main.dc.html", "ListaPC.dc.html",
+    "SinResultadosCel.dc.html", "SinResultadosPC.dc.html",
+    "VaciaCel.dc.html", "VaciaPC.dc.html",
+    "DetalleCel.dc.html", "DetallePC.dc.html",
+    "RegistrarCel.dc.html", "RegistrarPC.dc.html",
+    "FechaCel.dc.html", "FechaPC.dc.html",
+    "CorregirCel.dc.html", "CorregirPC.dc.html",
+    "ErroresCel.dc.html", "ErroresPC.dc.html",
+    "RegistradoCel.dc.html", "RegistradoPC.dc.html"
+  ],
+  "notes": {},
+  "designSystems": []
+}

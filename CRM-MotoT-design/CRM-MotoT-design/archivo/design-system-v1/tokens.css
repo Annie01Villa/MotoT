@@ -1,0 +1,165 @@
+/* MotoT — tokens CSS generados desde tokens.json */
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600&family=Geist+Mono:wght@400;500&display=swap');
+
+:root, [data-theme="light"] {
+  --gray-0: #ffffff;
+  --gray-25: #fafaf9;
+  --gray-50: #f5f5f3;
+  --gray-100: #ececea;
+  --gray-200: #e1e0dd;
+  --gray-300: #cbc9c5;
+  --gray-400: #a29f9a;
+  --gray-500: #78756f;
+  --gray-600: #5c5955;
+  --gray-700: #44423e;
+  --gray-800: #2b2a27;
+  --gray-900: #1c1b19;
+  --gray-950: #121211;
+  --ocre-50: #fdf6ee;
+  --ocre-100: #f9e7d2;
+  --ocre-200: #f2cc9f;
+  --ocre-300: #e8a865;
+  --ocre-400: #dc8a3a;
+  --ocre-500: #c96f1f;
+  --ocre-600: #a95915;
+  --ocre-700: #874612;
+  --ocre-800: #653510;
+  --ocre-900: #3d220c;
+  --green-600: #1c7046;
+  --green-100: #dcf1e5;
+  --green-400: #4cc58a;
+  --green-900: #11301f;
+  --yellow-700: #8a6100;
+  --yellow-100: #fbf0c9;
+  --yellow-400: #e6bd3c;
+  --yellow-900: #33280a;
+  --red-600: #b9302a;
+  --red-100: #fbe3e0;
+  --red-400: #f07468;
+  --red-900: #3a1714;
+  --blue-600: #2f5fb8;
+  --blue-100: #e2eafa;
+  --blue-400: #7ea3ea;
+  --blue-900: #152443;
+  --bg-canvas: #fafaf9;
+  --bg-surface: #ffffff;
+  --bg-subtle: #f5f5f3;
+  --bg-muted: #ececea;
+  --bg-inverse: #1c1b19;
+  --border-subtle: #ececea;
+  --border-default: #e1e0dd;
+  --border-strong: #cbc9c5;
+  --border-control: #8a8781;
+  --text-primary: #1c1b19;
+  --text-secondary: #5c5955;
+  --text-tertiary: #6f6c66;
+  --text-disabled: #a29f9a;
+  --text-inverse: #ffffff;
+  --text-link: #874612;
+  --accent: #a95915;
+  --accent-hover: #874612;
+  --accent-subtle: #fdf6ee;
+  --accent-muted: #f9e7d2;
+  --accent-text: #874612;
+  --text-on-accent: #ffffff;
+  --focus: #c96f1f;
+  --success: #1c7046;
+  --success-subtle: #dcf1e5;
+  --warning: #8a6100;
+  --warning-subtle: #fbf0c9;
+  --danger: #b9302a;
+  --danger-subtle: #fbe3e0;
+  --info: #2f5fb8;
+  --info-subtle: #e2eafa;
+  --shadow-xs: 0 1px 2px #1c1b190d;
+  --shadow-sm: 0 1px 2px #1c1b190f, 0 1px 3px #1c1b1914;
+  --shadow-md: 0 2px 4px #1c1b190f, 0 6px 16px -2px #1c1b191f;
+  --shadow-lg: 0 4px 8px #1c1b1914, 0 16px 40px -4px #1c1b1929;
+  --focus-ring: 0 0 0 2px #ffffff, 0 0 0 4px #c96f1f;
+  color-scheme: light;
+}
+
+[data-theme="dark"] {
+  --bg-canvas: #0f0f0e;
+  --bg-surface: #171716;
+  --bg-subtle: #1d1d1b;
+  --bg-muted: #262624;
+  --bg-inverse: #ececea;
+  --border-subtle: #242422;
+  --border-default: #2e2e2b;
+  --border-strong: #45433f;
+  --border-control: #75726c;
+  --text-primary: #ecebe8;
+  --text-secondary: #aeaaa4;
+  --text-tertiary: #8f8b85;
+  --text-disabled: #5c5955;
+  --text-inverse: #1c1b19;
+  --text-link: #e8a865;
+  --accent: #dc8a3a;
+  --accent-hover: #e8a865;
+  --accent-subtle: #2a1b0d;
+  --accent-muted: #3d220c;
+  --accent-text: #e8a865;
+  --text-on-accent: #1c1b19;
+  --focus: #dc8a3a;
+  --success: #4cc58a;
+  --success-subtle: #11301f;
+  --warning: #e6bd3c;
+  --warning-subtle: #33280a;
+  --danger: #f07468;
+  --danger-subtle: #3a1714;
+  --info: #7ea3ea;
+  --info-subtle: #152443;
+  --shadow-xs: 0 1px 2px #00000066;
+  --shadow-sm: 0 1px 3px #00000080;
+  --shadow-md: 0 6px 16px -2px #000000b3;
+  --shadow-lg: 0 16px 40px -4px #000000cc;
+  --focus-ring: 0 0 0 2px #171716, 0 0 0 4px #dc8a3a;
+  color-scheme: dark;
+}
+
+:root {
+  --font-sans: Geist, "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --space-0: 0px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-12: 48px;
+  --space-16: 64px;
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-full: 9999px;
+  --control-sm: 28px;
+  --control-md: 32px;
+  --control-lg: 40px;
+  --row-height: 40px;
+  --icon-sm: 14px;
+  --icon-md: 16px;
+  --sidebar-width: 240px;
+  --topbar-height: 48px;
+  --z-dropdown: 100;
+  --z-sticky: 200;
+  --z-overlay: 300;
+  --z-modal: 400;
+  --z-toast: 500;
+}
+
+.text-display { font-family: var(--font-sans); font-size: 32px; line-height: 40px; font-weight: 600; letter-spacing: -0.02em; }
+.text-heading-1 { font-family: var(--font-sans); font-size: 24px; line-height: 32px; font-weight: 600; letter-spacing: -0.015em; }
+.text-heading-2 { font-family: var(--font-sans); font-size: 18px; line-height: 26px; font-weight: 600; letter-spacing: -0.01em; }
+.text-heading-3 { font-family: var(--font-sans); font-size: 15px; line-height: 22px; font-weight: 600; }
+.text-body-lg { font-family: var(--font-sans); font-size: 15px; line-height: 24px; font-weight: 400; }
+.text-body { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 400; }
+.text-body-strong { font-family: var(--font-sans); font-size: 14px; line-height: 20px; font-weight: 500; }
+.text-small { font-family: var(--font-sans); font-size: 13px; line-height: 18px; font-weight: 400; }
+.text-caption { font-family: var(--font-sans); font-size: 12px; line-height: 16px; font-weight: 500; }
+.text-overline { font-family: var(--font-sans); font-size: 11px; line-height: 16px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; }
+.text-mono { font-family: var(--font-mono); font-size: 13px; line-height: 20px; font-weight: 400; font-variant-numeric: tabular-nums; }

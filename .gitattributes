@@ -1,0 +1,6 @@
+# Finales de línea LF en el repo (el Dockerfile y los scripts corren en Linux).
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.ico binary
+*.zip binary

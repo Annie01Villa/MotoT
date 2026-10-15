@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Financiamiento · Registrar · Celular</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.app,.app *{box-sizing:border-box}
+.app{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#1A202C;background:#F7F8FA;font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased;position:relative;overflow:hidden}
+.app h1,.app h2,.app p{margin:0}
+.app input::placeholder{color:#5A6475}
+.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.ic-s{width:20px;height:20px}
+.h-scr{font-size:24px;line-height:32px;font-weight:600}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:8px;border:1px solid transparent;font-family:inherit;font-size:16px;line-height:24px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn-pri{background:#C25A12;color:#FFFFFF}
+.btn-pri:hover{background:#A84B0C}
+.btn-sec{background:#FFFFFF;color:#C25A12;border-color:#E2E8F0}
+.btn-sec:hover{background:#FDF3EA}
+.btn-icon{width:44px;padding:0;background:transparent;color:#1A202C}
+.top{height:56px;flex-shrink:0;display:flex;align-items:center;gap:4px;padding:0 8px;background:#FFFFFF;border-bottom:1px solid #E2E8F0}
+.lbl{display:block;margin-bottom:8px;font-size:14px;line-height:20px;font-weight:500;color:#1A202C}
+.inp{display:flex;align-items:center;justify-content:space-between;gap:8px;width:100%;height:48px;margin:0;padding:0 12px;border:1px solid #E2E8F0;border-radius:8px;background:#FFFFFF;color:#1A202C;font-family:inherit;font-size:16px;line-height:24px;text-align:left}
+.inp:focus{outline:2px solid #C25A12;outline-offset:1px}
+.inp-placa{text-transform:uppercase;font-weight:600;letter-spacing:.5px}
+.inp-placa::placeholder{text-transform:none;font-weight:400;letter-spacing:0}
+.inp-vacio{color:#5A6475;cursor:pointer}
+.inp-fecha{cursor:pointer}
+.inp-fecha .ic{color:#C25A12}
+.money{position:relative}
+.money .pre{position:absolute;left:12px;top:12px;font-weight:600;color:#1A202C;pointer-events:none}
+.money .inp{padding-left:28px;font-variant-numeric:tabular-nums}
+</style>
+</helmet>
+<div class="app" style="width: 390px; height: 844px; display: flex; flex-direction: column">
+<header class="top">
+<button class="btn btn-icon" type="button" aria-label="Cancelar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+<h1 class="h-scr">Registrar financiamiento</h1>
+</header>
+<form style="flex: 1; min-height: 0; display: flex; flex-direction: column">
+<div style="flex: 1; padding: 24px 16px; display: flex; flex-direction: column; gap: 24px">
+<div>
+<label class="lbl" for="placa">Placa</label>
+<input class="inp inp-placa" id="placa" type="text" placeholder="Ejemplo: 27-ABC-4" autocapitalize="characters" autocomplete="off">
+</div>
+<div>
+<label class="lbl" for="fecha">Fecha de inicio</label>
+<button class="inp inp-vacio inp-fecha" id="fecha" type="button" aria-haspopup="dialog">Elige la fecha<svg class="ic ic-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 2v4"></path><path d="M16 2v4"></path><rect width="18" height="18" x="3" y="4" rx="2"></rect><path d="M3 10h18"></path></svg></button>
+</div>
+<div>
+<label class="lbl" for="monto">Monto financiado</label>
+<div class="money">
+<span class="pre" aria-hidden="true">$</span>
+<input class="inp" id="monto" type="text" inputmode="decimal" placeholder="0.00">
+</div>
+</div>
+</div>
+<div style="padding: 16px; background: #FFFFFF; border-top: 1px solid #E2E8F0; display: flex; flex-direction: column; gap: 12px">
+<button class="btn btn-pri" type="submit" style="width: 100%">Guardar</button>
+<button class="btn btn-sec" type="button" style="width: 100%">Cancelar</button>
+</div>
+</form>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

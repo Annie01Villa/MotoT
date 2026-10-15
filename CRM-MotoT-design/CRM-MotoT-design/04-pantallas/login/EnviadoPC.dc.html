@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Recuperar contraseña · Enlace enviado · Computadora</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.app,.app *{box-sizing:border-box}
+.app{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#1C1917;font-size:14px;line-height:20px;-webkit-font-smoothing:antialiased}
+.app h1,.app p{margin:0}
+.ic{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.logo{display:flex;align-items:center;gap:8px;font-size:16px;line-height:24px;font-weight:600;letter-spacing:-0.01em;color:#1C1917}
+.logo .ic{color:#C25A12}
+.btn{display:flex;align-items:center;justify-content:center;gap:8px;width:100%;height:44px;padding:0 16px;border:0;border-radius:6px;background:#C25A12;color:#FFFFFF;font-family:inherit;font-size:14px;line-height:20px;font-weight:600;text-decoration:none;cursor:pointer}
+.btn:hover{background:#A84B0C;color:#FFFFFF}
+.msg{display:flex;align-items:flex-start;gap:8px;padding:12px;border-radius:6px}
+</style>
+</helmet>
+<div class="app" style="width: 1440px; height: 900px; background: #FAFAF9; display: flex; align-items: center; justify-content: center">
+<main style="width: 400px; background: #FFFFFF; border: 1px solid #E7E5E4; border-radius: 8px; padding: 32px; display: flex; flex-direction: column; gap: 24px">
+<div class="logo"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18.5" cy="17.5" r="3.5"></circle><circle cx="5.5" cy="17.5" r="3.5"></circle><circle cx="15" cy="5" r="1"></circle><path d="M12 17.5V14l-3-3 4-3 2 3h2"></path></svg><span>CRM-MotoT</span></div>
+<div style="display: flex; flex-direction: column; gap: 16px">
+<h1 style="font-size: 24px; line-height: 32px; font-weight: 600; letter-spacing: -0.01em">Recuperar contraseña</h1>
+<div class="msg" role="status" style="background: #F0FDF4; color: #15803D"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"></circle><path d="m9 12 2 2 4-4"></path></svg><p><span style="font-weight: 600">Revisa tu correo.</span> Te enviamos un enlace para crear una contraseña nueva.</p></div>
+</div>
+<a class="btn" href="LoginPC.dc.html">Volver a entrar</a>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

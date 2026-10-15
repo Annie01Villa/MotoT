@@ -1,0 +1,31 @@
+{
+  "v": 3,
+  "createdOnFiles": {"v": 1, "at": "2026-10-14T03:40:00Z"},
+  "title": "Chofer · Detalle y formulario",
+  "launch": {"view": "canvas"},
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {"x": 0, "y": 0, "w": 390, "h": 844, "title": "1 · Chofer · Detalle · Celular"},
+    "DetallePC.dc.html": {"x": 470, "y": 0, "w": 1440, "h": 900, "title": "1 · Chofer · Detalle · Computadora"},
+    "SinMotoCel.dc.html": {"x": 0, "y": 1020, "w": 390, "h": 844, "title": "2 · Chofer sin moto · Detalle · Celular"},
+    "SinMotoPC.dc.html": {"x": 470, "y": 1020, "w": 1440, "h": 900, "title": "2 · Chofer sin moto · Detalle · Computadora"},
+    "RegistrarCel.dc.html": {"x": 0, "y": 2040, "w": 390, "h": 844, "title": "3 · Registrar chofer · Celular"},
+    "RegistrarPC.dc.html": {"x": 470, "y": 2040, "w": 1440, "h": 900, "title": "3 · Registrar chofer · Computadora"},
+    "CorregirCel.dc.html": {"x": 0, "y": 3060, "w": 390, "h": 844, "title": "4 · Corregir chofer · Celular"},
+    "CorregirPC.dc.html": {"x": 470, "y": 3060, "w": 1440, "h": 900, "title": "4 · Corregir chofer · Computadora"},
+    "ErroresCel.dc.html": {"x": 0, "y": 4080, "w": 390, "h": 844, "title": "5 · Registrar chofer · Con errores · Celular"},
+    "ErroresPC.dc.html": {"x": 470, "y": 4080, "w": 1440, "h": 900, "title": "5 · Registrar chofer · Con errores · Computadora"},
+    "RegistradoCel.dc.html": {"x": 0, "y": 5100, "w": 390, "h": 844, "title": "6 · Chofer registrado · Aviso · Celular"},
+    "RegistradoPC.dc.html": {"x": 470, "y": 5100, "w": 1440, "h": 900, "title": "6 · Chofer registrado · Aviso · Computadora"}
+  },
+  "order": [
+    "Main.dc.html", "DetallePC.dc.html",
+    "SinMotoCel.dc.html", "SinMotoPC.dc.html",
+    "RegistrarCel.dc.html", "RegistrarPC.dc.html",
+    "CorregirCel.dc.html", "CorregirPC.dc.html",
+    "ErroresCel.dc.html", "ErroresPC.dc.html",
+    "RegistradoCel.dc.html", "RegistradoPC.dc.html"
+  ],
+  "notes": {},
+  "designSystems": []
+}

@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Choferes · Buscando · Computadora</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.app,.app *{box-sizing:border-box}
+.app{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#1A202C;background:#F7F8FA;font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased;position:relative;overflow:hidden}
+.app h1,.app h2,.app p{margin:0}
+.app input::placeholder{color:#5A6475}
+.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.ic-s{width:20px;height:20px}
+.ic-xs{width:16px;height:16px}
+.num{font-variant-numeric:tabular-nums}
+.placa{text-transform:uppercase;font-weight:600;letter-spacing:.5px}
+.h-scr-pc{font-size:28px;line-height:36px;font-weight:600}
+.sec{font-size:14px;line-height:20px;color:#5A6475}
+.lab{font-size:12px;line-height:16px;font-weight:500;color:#5A6475}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:8px;border:1px solid transparent;font-family:inherit;font-size:16px;line-height:24px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn-pri{background:#C25A12;color:#FFFFFF}
+.btn-pri:hover{background:#A84B0C}
+.tag{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font-size:12px;line-height:16px;font-weight:500;white-space:nowrap}
+.tag-ayu{color:#5A6475;background:#EEF0F3}
+.search{position:relative;width:480px}
+.search > .ic{position:absolute;left:12px;top:14px;color:#5A6475;pointer-events:none}
+.search input{width:100%;height:48px;padding:0 44px;border:1px solid #E2E8F0;border-radius:8px;background:#FFFFFF;font-family:inherit;font-size:16px;line-height:24px;color:#1A202C;-webkit-appearance:none;appearance:none}
+.search input:focus,.search input.is-focus{outline:none;border-color:#C25A12;box-shadow:0 0 0 3px #FDF3EA}
+.search input::-webkit-search-cancel-button{display:none}
+.clear{position:absolute;right:2px;top:2px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:8px;background:transparent;color:#5A6475;cursor:pointer}
+.clear:hover{color:#1A202C}
+mark{background:#FDF3EA;color:inherit;border-radius:2px}
+.thead,.trow{display:grid;grid-template-columns:240px 200px minmax(0,1fr) 160px 24px;gap:24px;align-items:center;padding:0 24px}
+.thead{height:44px;border-bottom:1px solid #E2E8F0}
+.trow{position:relative;min-height:64px}
+.trow + .trow{border-top:1px solid #E2E8F0}
+.trow:hover{background:#F7F8FA}
+.trow:last-child{border-radius:0 0 12px 12px}
+.r-name{font-weight:600;color:#1A202C;text-decoration:none}
+.r-name::after{content:"";position:absolute;inset:0}
+.tel{position:relative;z-index:1;justify-self:start;display:inline-flex;align-items:center;gap:8px;min-height:44px;color:#C25A12;font-weight:500;text-decoration:none}
+.tel:hover{color:#A84B0C;text-decoration:underline}
+.moto{display:inline-flex;align-items:center;gap:8px}
+.moto .ic{color:#5A6475}
+.chev{color:#5A6475}
+.side{width:240px;flex-shrink:0;display:flex;flex-direction:column;padding:24px 16px;background:#FFFFFF;border-right:1px solid #E2E8F0}
+.logo{display:flex;align-items:center;gap:8px;padding:0 12px;min-height:44px;font-size:18px;line-height:26px;font-weight:600}
+.nav-t{padding:0 12px;margin:24px 0 8px;font-size:12px;line-height:16px;font-weight:500;color:#5A6475}
+.nav-i{position:relative;display:flex;align-items:center;gap:12px;min-height:44px;padding:0 12px;border-radius:8px;color:#1A202C;font-family:inherit;font-size:16px;line-height:24px;font-weight:500;text-decoration:none;background:transparent;border:0;width:100%;cursor:pointer}
+.nav-i .ic{color:#5A6475}
+.nav-i.on{background:#FDF3EA;color:#C25A12;font-weight:600}
+.nav-i.on .ic{color:#C25A12}
+.nav-i.on::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:3px;border-radius:0 3px 3px 0;background:#F26B1D}
+</style>
+</helmet>
+<div class="app" style="width: 1440px; height: 900px; display: flex">
+<aside class="side">
+<div class="logo"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="color: #F26B1D"><circle cx="18.5" cy="17.5" r="3.5"></circle><circle cx="5.5" cy="17.5" r="3.5"></circle><circle cx="15" cy="5" r="1"></circle><path d="M12 17.5V14l-3-3 4-3 2 3h2"></path></svg>CRM-MotoT</div>
+<nav aria-label="Menú principal" style="display: flex; flex-direction: column; gap: 4px">
+<p class="nav-t">Operación</p>
+<a class="nav-i" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 17.5v-11"></path></svg>Liquidaciones</a>
+<a class="nav-i" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18.5" cy="17.5" r="3.5"></circle><circle cx="5.5" cy="17.5" r="3.5"></circle><circle cx="15" cy="5" r="1"></circle><path d="M12 17.5V14l-3-3 4-3 2 3h2"></path></svg>Motos</a>
+<a class="nav-i on" href="#" aria-current="page"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Choferes</a>
+<p class="nav-t">Administración</p>
+<a class="nav-i" href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Usuarios</a>
+</nav>
+<div style="margin-top: auto; padding-top: 16px; border-top: 1px solid #E2E8F0; display: flex; flex-direction: column; gap: 8px">
+<div style="padding: 0 12px; display: flex; flex-direction: column; align-items: flex-start; gap: 4px">
+<span style="font-weight: 600">Pedro Martínez</span>
+<span class="tag tag-ayu">Ayudante</span>
+</div>
+<button class="nav-i" type="button"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><path d="m16 17 5-5-5-5"></path><path d="M21 12H9"></path></svg>Cerrar sesión</button>
+</div>
+</aside>
+<main style="flex: 1; min-width: 0; padding: 32px; display: flex; flex-direction: column; gap: 24px">
+<div style="display: flex; align-items: flex-end; justify-content: space-between; gap: 24px">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<h1 class="h-scr-pc">Choferes</h1>
+<p class="sec num" aria-live="polite">1 chofer</p>
+</div>
+<a class="btn btn-pri" href="#"><svg class="ic ic-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Registrar chofer</a>
+</div>
+<div class="search">
+<label class="sr" for="q">Buscar choferes</label>
+<svg class="ic ic-s" viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg>
+<input id="q" class="is-focus" type="search" value="55 23" placeholder="Buscar por nombre o teléfono">
+<button class="clear" type="button" aria-label="Borrar búsqueda"><svg class="ic ic-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+</div>
+<section class="card" aria-label="Lista de choferes">
+<div class="thead lab">
+<span>Nombre</span>
+<span>Teléfono</span>
+<span>Domicilio</span>
+<span>Moto</span>
+<span class="sr">Abrir</span>
+</div>
+<div class="trow">
+<a class="r-name" href="#">María González Ruiz</a>
+<a class="tel num" href="tel:5523456789" aria-label="Llamar a María González Ruiz, 55 2345 6789"><svg class="ic ic-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg><span><mark>55 23</mark>45 6789</span></a>
+<span class="sec">Av. Juárez 120, Col. Moderna</span>
+<span class="moto"><svg class="ic ic-xs" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18.5" cy="17.5" r="3.5"></circle><circle cx="5.5" cy="17.5" r="3.5"></circle><circle cx="15" cy="5" r="1"></circle><path d="M12 17.5V14l-3-3 4-3 2 3h2"></path></svg><span class="placa">31-XKT-8</span></span>
+<svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true"><path d="m9 18 6-6-6-6"></path></svg>
+</div>
+</section>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":900}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,225 @@
+{
+  "v": 3,
+  "createdOnFiles": {
+    "v": 1,
+    "at": "2026-10-14T16:01:38Z"
+  },
+  "title": "Liquidaciones",
+  "launch": {
+    "view": "canvas"
+  },
+  "pages": [],
+  "boards": {
+    "Main.dc.html": {
+      "x": 0,
+      "y": 0,
+      "w": 390,
+      "h": 844,
+      "title": "1 · Liquidaciones · Historial · Celular",
+      "is_interactive": true
+    },
+    "HistorialPC.dc.html": {
+      "x": 470,
+      "y": 0,
+      "w": 1440,
+      "h": 900,
+      "title": "1 · Liquidaciones · Historial · Computadora",
+      "is_interactive": true
+    },
+    "BuscandoCel.dc.html": {
+      "x": 0,
+      "y": 1020,
+      "w": 390,
+      "h": 844,
+      "title": "2 · Liquidaciones · Buscando · Celular",
+      "is_interactive": true
+    },
+    "BuscandoPC.dc.html": {
+      "x": 470,
+      "y": 1020,
+      "w": 1440,
+      "h": 900,
+      "title": "2 · Liquidaciones · Buscando · Computadora",
+      "is_interactive": true
+    },
+    "SinResultadosCel.dc.html": {
+      "x": 0,
+      "y": 2040,
+      "w": 390,
+      "h": 844,
+      "title": "3 · Liquidaciones · Sin resultados · Celular",
+      "is_interactive": true
+    },
+    "SinResultadosPC.dc.html": {
+      "x": 470,
+      "y": 2040,
+      "w": 1440,
+      "h": 900,
+      "title": "3 · Liquidaciones · Sin resultados · Computadora",
+      "is_interactive": true
+    },
+    "VaciaCel.dc.html": {
+      "x": 0,
+      "y": 3060,
+      "w": 390,
+      "h": 844,
+      "title": "4 · Liquidaciones · Lista vacía · Celular",
+      "is_interactive": true
+    },
+    "VaciaPC.dc.html": {
+      "x": 470,
+      "y": 3060,
+      "w": 1440,
+      "h": 900,
+      "title": "4 · Liquidaciones · Lista vacía · Computadora",
+      "is_interactive": true
+    },
+    "RegistrarCel.dc.html": {
+      "x": 0,
+      "y": 4080,
+      "w": 390,
+      "h": 844,
+      "title": "5 · Liquidaciones · Registrar · Celular",
+      "is_interactive": true
+    },
+    "RegistrarPC.dc.html": {
+      "x": 470,
+      "y": 4080,
+      "w": 1440,
+      "h": 900,
+      "title": "5 · Liquidaciones · Registrar · Computadora",
+      "is_interactive": true
+    },
+    "ElegirMotoCel.dc.html": {
+      "x": 0,
+      "y": 5100,
+      "w": 390,
+      "h": 844,
+      "title": "5a · Liquidaciones · Registrar · Elegir moto · Celular",
+      "is_interactive": true
+    },
+    "ElegirMotoPC.dc.html": {
+      "x": 470,
+      "y": 5100,
+      "w": 1440,
+      "h": 900,
+      "title": "5a · Liquidaciones · Registrar · Elegir moto · Computadora",
+      "is_interactive": true
+    },
+    "FechaCel.dc.html": {
+      "x": 0,
+      "y": 6120,
+      "w": 390,
+      "h": 844,
+      "title": "5b · Liquidaciones · Registrar · Fecha · Celular",
+      "is_interactive": true
+    },
+    "FechaPC.dc.html": {
+      "x": 470,
+      "y": 6120,
+      "w": 1440,
+      "h": 900,
+      "title": "5b · Liquidaciones · Registrar · Fecha · Computadora",
+      "is_interactive": true
+    },
+    "TecladoCel.dc.html": {
+      "x": 0,
+      "y": 7140,
+      "w": 390,
+      "h": 844,
+      "title": "5c · Liquidaciones · Registrar · Monto con teclado numérico · Celular",
+      "is_interactive": true
+    },
+    "ErroresCel.dc.html": {
+      "x": 0,
+      "y": 8160,
+      "w": 390,
+      "h": 844,
+      "title": "6 · Liquidaciones · Registrar con errores · Celular",
+      "is_interactive": true
+    },
+    "ErroresPC.dc.html": {
+      "x": 470,
+      "y": 8160,
+      "w": 1440,
+      "h": 900,
+      "title": "6 · Liquidaciones · Registrar con errores · Computadora",
+      "is_interactive": true
+    },
+    "RegistradaCel.dc.html": {
+      "x": 0,
+      "y": 9180,
+      "w": 390,
+      "h": 844,
+      "title": "7 · Liquidaciones · Liquidación registrada · Celular",
+      "is_interactive": true
+    },
+    "RegistradaPC.dc.html": {
+      "x": 470,
+      "y": 9180,
+      "w": 1440,
+      "h": 900,
+      "title": "7 · Liquidaciones · Liquidación registrada · Computadora",
+      "is_interactive": true
+    },
+    "DetalleCel.dc.html": {
+      "x": 0,
+      "y": 10200,
+      "w": 390,
+      "h": 844,
+      "title": "8 · Liquidaciones · Detalle · Celular",
+      "is_interactive": true
+    },
+    "DetallePC.dc.html": {
+      "x": 470,
+      "y": 10200,
+      "w": 1440,
+      "h": 900,
+      "title": "8 · Liquidaciones · Detalle · Computadora",
+      "is_interactive": true
+    },
+    "CorregirCel.dc.html": {
+      "x": 0,
+      "y": 11220,
+      "w": 390,
+      "h": 844,
+      "title": "9 · Liquidaciones · Corregir · Celular",
+      "is_interactive": true
+    },
+    "CorregirPC.dc.html": {
+      "x": 470,
+      "y": 11220,
+      "w": 1440,
+      "h": 900,
+      "title": "9 · Liquidaciones · Corregir · Computadora",
+      "is_interactive": true
+    }
+  },
+  "order": [
+    "Main.dc.html",
+    "HistorialPC.dc.html",
+    "BuscandoCel.dc.html",
+    "BuscandoPC.dc.html",
+    "SinResultadosCel.dc.html",
+    "SinResultadosPC.dc.html",
+    "VaciaCel.dc.html",
+    "VaciaPC.dc.html",
+    "RegistrarCel.dc.html",
+    "RegistrarPC.dc.html",
+    "ElegirMotoCel.dc.html",
+    "ElegirMotoPC.dc.html",
+    "FechaCel.dc.html",
+    "FechaPC.dc.html",
+    "TecladoCel.dc.html",
+    "ErroresCel.dc.html",
+    "ErroresPC.dc.html",
+    "RegistradaCel.dc.html",
+    "RegistradaPC.dc.html",
+    "DetalleCel.dc.html",
+    "DetallePC.dc.html",
+    "CorregirCel.dc.html",
+    "CorregirPC.dc.html"
+  ],
+  "notes": {},
+  "designSystems": []
+}

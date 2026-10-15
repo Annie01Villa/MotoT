@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Dar de alta usuario · Celular</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+.app,.app *{box-sizing:border-box}
+.app{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#1A202C;background:#F7F8FA;font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased;position:relative;overflow:hidden}
+.app h1,.app h2,.app p,.app ul{margin:0}
+.app ul{padding:0;list-style:none}
+.app input::placeholder{color:#5A6475}
+.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.ic-s{width:20px;height:20px}
+.ic-xs{width:16px;height:16px}
+.ic-l{width:32px;height:32px}
+.num{font-variant-numeric:tabular-nums}
+.h-scr{font-size:24px;line-height:32px;font-weight:600}
+.h-scr-pc{font-size:28px;line-height:36px;font-weight:600}
+.h-sub{font-size:18px;line-height:26px;font-weight:600}
+.sec{font-size:14px;line-height:20px;color:#5A6475}
+.lab{font-size:12px;line-height:16px;font-weight:500;color:#5A6475}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:8px;border:1px solid transparent;font-family:inherit;font-size:16px;line-height:24px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap}
+.btn-pri{background:#C25A12;color:#FFFFFF}
+.btn-pri:hover{background:#A84B0C}
+.btn-sec{background:#FFFFFF;color:#C25A12;border-color:#E2E8F0}
+.btn-sec:hover{background:#FDF3EA}
+.btn-dan{background:#C5221F;color:#FFFFFF}
+.btn-dan:hover{background:#A51C1A}
+.btn-dan-sec{background:#FFFFFF;color:#C5221F;border-color:#E2E8F0}
+.btn-dan-sec:hover{background:#FCE8E6;border-color:#C5221F}
+.btn-icon{width:44px;padding:0;background:transparent;color:#1A202C}
+.btn-icon:hover{background:#F7F8FA}
+.tag{display:inline-flex;align-items:center;height:24px;padding:0 10px;border-radius:999px;font-size:12px;line-height:16px;font-weight:500;white-space:nowrap}
+.tag-ger{color:#C25A12;background:#FDF3EA}
+.tag-ayu{color:#5A6475;background:#EEF0F3}
+.tag-alta{color:#1E8E3E;background:#E6F4EA}
+.tag-baja{color:#C5221F;background:#FCE8E6}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.yo{font-size:14px;line-height:20px;font-weight:400;color:#5A6475}
+.note{display:flex;align-items:flex-start;gap:12px;padding:12px 16px;border-radius:12px;background:#FDF3EA;color:#1A202C;font-size:14px;line-height:20px}
+.note .ic{color:#C25A12}
+.search{position:relative}
+.search > .ic{position:absolute;left:12px;top:14px;color:#5A6475;pointer-events:none}
+.search input{width:100%;height:48px;padding:0 44px;border:1px solid #E2E8F0;border-radius:8px;background:#FFFFFF;font-family:inherit;font-size:16px;line-height:24px;color:#1A202C;-webkit-appearance:none;appearance:none}
+.search input:focus{outline:none;border-color:#C25A12;box-shadow:0 0 0 3px #FDF3EA}
+.search input::-webkit-search-cancel-button{display:none}
+.clear{position:absolute;right:2px;top:2px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;padding:0;border:0;border-radius:8px;background:transparent;color:#5A6475;cursor:pointer}
+.clear:hover{color:#1A202C}
+.empty-ic{width:64px;height:64px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:#EEF0F3;color:#5A6475}
+.ucard{position:relative;display:flex;align-items:flex-start;gap:8px;padding:16px 8px 16px 16px}
+.u-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:4px}
+.u-name{font-weight:600}
+.u-mail{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.menu{position:absolute;right:8px;top:60px;z-index:2;min-width:220px;padding:8px;display:flex;flex-direction:column;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.14)}
+.menu button{display:flex;align-items:center;min-height:44px;padding:0 12px;border:0;border-radius:8px;background:transparent;font-family:inherit;font-size:16px;line-height:24px;font-weight:500;text-align:left;cursor:pointer}
+.menu .m-dan{color:#C5221F}
+.menu .m-dan:hover{background:#FCE8E6}
+.fab{position:absolute;right:16px;bottom:88px;width:56px;height:56px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:#C25A12;color:#FFFFFF;text-decoration:none;box-shadow:0 4px 12px rgba(194,90,18,.32)}
+.fab:hover{background:#A84B0C}
+.top{height:56px;flex-shrink:0;display:flex;align-items:center;gap:4px;padding:0 16px;background:#FFFFFF}
+.top-form{padding:0 8px;border-bottom:1px solid #E2E8F0}
+.top-line{border-bottom:1px solid #E2E8F0}
+.subnav{flex-shrink:0;display:flex;gap:8px;padding:0 8px;background:#FFFFFF;border-bottom:1px solid #E2E8F0}
+.subnav a{position:relative;display:flex;align-items:center;gap:8px;min-height:48px;padding:0 12px;color:#5A6475;font-size:14px;line-height:20px;font-weight:500;text-decoration:none}
+.subnav a.on{color:#C25A12;font-weight:600}
+.subnav a.on::after{content:"";position:absolute;left:8px;right:8px;bottom:-1px;height:3px;border-radius:3px 3px 0 0;background:#F26B1D}
+.bnav{height:72px;flex-shrink:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:0 4px;background:#FFFFFF;border-top:1px solid #E2E8F0}
+.bnav a{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;margin:8px 2px;border-radius:8px;color:#5A6475;font-size:12px;line-height:16px;font-weight:500;text-decoration:none}
+.bnav a.on{color:#C25A12;background:#FDF3EA;font-weight:600}
+.bnav a.on::before{content:"";position:absolute;top:-9px;left:50%;margin-left:-16px;width:32px;height:3px;border-radius:0 0 3px 3px;background:#F26B1D}
+.side{width:240px;flex-shrink:0;display:flex;flex-direction:column;padding:24px 16px;background:#FFFFFF;border-right:1px solid #E2E8F0}
+.logo{display:flex;align-items:center;gap:8px;padding:0 12px;min-height:44px;font-size:18px;line-height:26px;font-weight:600}
+.app .nav-t{padding:0 12px;margin:24px 0 8px;font-size:12px;line-height:16px;font-weight:500;color:#5A6475}
+.nav-i{position:relative;display:flex;align-items:center;gap:12px;min-height:44px;padding:0 12px;border-radius:8px;color:#1A202C;font-family:inherit;font-size:16px;line-height:24px;font-weight:500;text-decoration:none;background:transparent;border:0;width:100%;cursor:pointer}
+.nav-i .ic{color:#5A6475}
+.nav-i.on{background:#FDF3EA;color:#C25A12;font-weight:600}
+.nav-i.on .ic{color:#C25A12}
+.nav-i.on::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:3px;border-radius:0 3px 3px 0;background:#F26B1D}
+.thead,.trow{display:grid;gap:24px;align-items:center;padding:0 24px}
+.cols-g{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) 120px 100px 216px}
+.cols-a{grid-template-columns:minmax(0,1fr) minmax(0,1.2fr) 120px 100px}
+.thead{height:44px;border-bottom:1px solid #E2E8F0}
+.trow{min-height:68px}
+.trow + .trow{border-top:1px solid #E2E8F0}
+.scrim{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(26,32,44,.48)}
+.dlg{box-shadow:0 12px 32px rgba(0,0,0,.18)}
+.lbl{display:block;margin-bottom:8px;font-size:14px;line-height:20px;font-weight:500;color:#1A202C}
+.app .hint{margin:-4px 0 8px}
+.inp{display:block;width:100%;height:48px;margin:0;padding:0 12px;border:1px solid #E2E8F0;border-radius:8px;background:#FFFFFF;color:#1A202C;font-family:inherit;font-size:16px;line-height:24px}
+.inp:focus{outline:2px solid #C25A12;outline-offset:1px}
+.inp-err{border-color:#C5221F;box-shadow:inset 0 0 0 1px #C5221F}
+.inp-err:focus{outline-color:#C5221F}
+.err{display:flex;align-items:center;gap:6px;margin-top:8px;font-size:14px;line-height:20px;color:#C5221F}
+fieldset{margin:0;padding:0;border:0;min-width:0}
+legend{padding:0}
+.opts{display:flex;flex-direction:column;gap:12px}
+.opt{display:flex;align-items:flex-start;gap:12px;min-height:44px;padding:12px 16px;border:1px solid #E2E8F0;border-radius:8px;background:#FFFFFF;cursor:pointer}
+.opt.on{border-color:#C25A12;background:#FDF3EA}
+.opt input{-webkit-appearance:none;appearance:none;width:20px;height:20px;margin:2px 0 0;flex-shrink:0;border:2px solid #5A6475;border-radius:999px;background:#FFFFFF;cursor:pointer}
+.opt input:checked{border:6px solid #C25A12}
+.opt input:focus-visible{outline:2px solid #C25A12;outline-offset:2px}
+.opt-t{display:flex;flex-direction:column;gap:2px}
+.opt-t strong{font-weight:600}
+.toast{display:flex;align-items:center;gap:12px;padding:6px 6px 6px 16px;border-radius:12px;background:#E6F4EA;color:#1A202C;font-weight:600;box-shadow:0 4px 16px rgba(0,0,0,.12)}
+</style>
+</helmet>
+<div class="app" style="width: 390px; height: 844px; display: flex; flex-direction: column">
+<header class="top top-form">
+<button class="btn btn-icon" type="button" aria-label="Cancelar"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6 6 18"></path><path d="m6 6 12 12"></path></svg></button>
+<h1 class="h-scr">Dar de alta usuario</h1>
+</header>
+<form novalidate="" style="flex: 1; min-height: 0; display: flex; flex-direction: column">
+<div style="flex: 1; min-height: 0; overflow: hidden; padding: 24px 16px; display: flex; flex-direction: column; gap: 24px">
+<div>
+<label class="lbl" for="nombre">Nombre completo</label>
+<input class="inp" id="nombre" type="text" placeholder="Ejemplo: Pedro Martínez" autocomplete="name">
+</div>
+<div>
+<label class="lbl" for="correo">Correo</label>
+<p class="sec hint" id="correo-ayuda">Con este correo va a entrar al CRM</p>
+<input class="inp" id="correo" type="email" placeholder="nombre@ejemplo.com" autocomplete="email" inputmode="email" autocapitalize="off" aria-describedby="correo-ayuda">
+</div>
+<fieldset>
+<legend class="lbl">Rol</legend>
+<div class="opts">
+<label class="opt">
+<input type="radio" name="rol" value="Gerente">
+<span class="opt-t"><strong>Gerente</strong><span class="sec">Puede dar altas y bajas de usuarios y ver Financiamiento</span></span>
+</label>
+<label class="opt on">
+<input type="radio" name="rol" value="Ayudante" checked>
+<span class="opt-t"><strong>Ayudante</strong><span class="sec">Registra motos, choferes y liquidaciones</span></span>
+</label>
+</div>
+</fieldset>
+<p class="sec">Le enviaremos un correo para que cree su contraseña.</p>
+</div>
+<div style="padding: 16px; background: #FFFFFF; border-top: 1px solid #E2E8F0; display: flex; flex-direction: column; gap: 12px">
+<button class="btn btn-pri" type="submit" style="width: 100%">Dar de alta</button>
+<button class="btn btn-sec" type="button" style="width: 100%">Cancelar</button>
+</div>
+</form>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>

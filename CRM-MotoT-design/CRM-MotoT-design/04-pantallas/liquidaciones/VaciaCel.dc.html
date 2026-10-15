@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Liquidaciones · Lista vacía · Celular</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<style>body{margin:0}
+.app,.app *{box-sizing:border-box}
+.app{font-family:'Inter',system-ui,-apple-system,sans-serif;color:#1A202C;background:#F7F8FA;font-size:16px;line-height:24px;-webkit-font-smoothing:antialiased;position:relative;overflow:hidden}
+.app h1,.app h2,.app h3,.app p,.app dl,.app dd{margin:0}
+.app ul{margin:0;padding:0;list-style:none}
+.app input::placeholder{color:#5A6475;opacity:1}
+.app a{color:#C25A12}
+.app a:hover{color:#A84B0C}
+.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.ic-s{width:20px;height:20px}
+.ic-xs{width:16px;height:16px}
+.num{font-variant-numeric:tabular-nums}
+.placa{text-transform:uppercase;font-weight:600;letter-spacing:.5px;white-space:nowrap}
+.t-scr{font-size:24px;line-height:32px;font-weight:600}
+.t-scr-pc{font-size:28px;line-height:36px;font-weight:600}
+.t-sub{font-size:18px;line-height:26px;font-weight:600}
+.t-sec{font-size:14px;line-height:20px;color:#5A6475}
+.t-lab{font-size:12px;line-height:16px;font-weight:500}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.card{background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 16px;border-radius:8px;border:1px solid transparent;font-family:inherit;font-size:16px;line-height:24px;font-weight:600;text-decoration:none;cursor:pointer;white-space:nowrap}
+.app .btn-pri{background:#C25A12;color:#FFFFFF}
+.app .btn-pri:hover{background:#A84B0C;color:#FFFFFF}
+.app .btn-sec{background:#FFFFFF;color:#C25A12;border-color:#E2E8F0}
+.app .btn-sec:hover{background:#FDF3EA;color:#C25A12}
+.app .btn-ico{width:44px;padding:0;background:transparent;color:#1A202C}
+.app .btn-ico:hover{background:#F7F8FA;color:#1A202C}
+.btn-lg{min-height:48px}
+.tag{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:999px;font-size:12px;line-height:16px;font-weight:500;white-space:nowrap}
+.tag-ayu{color:#5A6475;background:#EEF0F3}
+.tag-aviso{color:#B26A00;background:#FFF4E5}
+.tag-nueva{color:#C25A12;background:#FDF3EA}
+.dot{width:8px;height:8px;border-radius:999px;background:#F26B1D;flex-shrink:0}
+/* buscador */
+.search{position:relative}
+.search > .ic{position:absolute;left:12px;top:14px;color:#5A6475;pointer-events:none}
+.search input{width:100%;height:48px;padding:0 48px 0 44px;border:1px solid #E2E8F0;border-radius:8px;background:#FFFFFF;font-family:inherit;font-size:16px;line-height:24px;color:#1A202C;-webkit-appearance:none;appearance:none}
+.search input:focus,.search input.foco{outline:none;border-color:#C25A12;box-shadow:0 0 0 3px #FDF3EA}
+.search input::-webkit-search-cancel-button{display:none}
+.search .clr{position:absolute;right:2px;top:2px;width:44px;height:44px;display:flex;align-items:center;justify-content:center;border-radius:8px;color:#5A6475;text-decoration:none}
+.app .search .clr:hover{background:#F7F8FA;color:#1A202C}
+/* celular */
+.top{height:56px;flex-shrink:0;display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 16px;background:#FFFFFF;border-bottom:1px solid #E2E8F0}
+.top-f{padding:0 16px 0 4px;justify-content:flex-start}
+.app .back{display:inline-flex;align-items:center;gap:8px;min-height:44px;padding:0 12px 0 8px;margin-left:-8px;border-radius:8px;color:#C25A12;font-weight:600;text-decoration:none}
+.day{font-size:14px;line-height:20px;font-weight:600;color:#5A6475}
+.app .lcard{display:flex;align-items:center;gap:12px;min-height:72px;padding:12px 12px 12px 16px;color:#1A202C;text-decoration:none}
+.app .lcard:hover{border-color:#C25A12;color:#1A202C}
+.lc-body{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}
+.monto{font-weight:600;font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.chev{color:#5A6475}
+.app .fab{position:absolute;right:16px;bottom:88px;height:56px;padding:0 24px 0 20px;border-radius:999px;display:flex;align-items:center;gap:8px;background:#C25A12;color:#FFFFFF;font-size:16px;line-height:24px;font-weight:600;text-decoration:none;box-shadow:0 4px 12px rgba(194,90,18,.32)}
+.app .fab:hover{background:#A84B0C;color:#FFFFFF}
+.bnav{height:72px;flex-shrink:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding:0 4px;background:#FFFFFF;border-top:1px solid #E2E8F0}
+.app .bnav a{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;margin:8px 2px;border-radius:8px;color:#5A6475;font-size:12px;line-height:16px;font-weight:500;text-decoration:none}
+.app .bnav a.on{color:#C25A12;background:#FDF3EA;font-weight:600}
+.app .bnav a.on::before{content:"";position:absolute;top:-9px;left:50%;margin-left:-16px;width:32px;height:3px;border-radius:0 0 3px 3px;background:#F26B1D}
+.toast{position:absolute;display:flex;align-items:center;gap:12px;padding:8px 4px 8px 16px;border-radius:12px;background:#E6F4EA;border:1px solid #CDE9D6;box-shadow:0 4px 12px rgba(0,0,0,.12);color:#1A202C;font-weight:600}
+.toast > .ic{color:#1E8E3E}
+.nuevo{background:#FDF3EA}
+/* formularios */
+.app .lbl{display:block;margin:0 0 8px;font-size:14px;line-height:20px;font-weight:500;color:#1A202C}
+.inp{display:flex;align-items:center;gap:8px;width:100%;height:48px;margin:0;padding:0 12px;border:1px solid #E2E8F0;border-radius:8px;background:#FFFFFF;color:#1A202C;font-family:inherit;font-size:16px;line-height:24px;text-align:left;text-decoration:none;cursor:pointer}
+.app a.inp{color:#1A202C}
+.app a.inp:hover{border-color:#C25A12;color:#1A202C}
+.inp .val{flex:1;min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.inp > .ic{color:#5A6475}
+input.inp{cursor:text}
+.inp:focus{outline:none;border-color:#C25A12;box-shadow:0 0 0 3px #FDF3EA}
+.inp.foco{border-color:#C25A12;box-shadow:0 0 0 3px #FDF3EA}
+.inp.err{border-color:#C5221F;box-shadow:0 0 0 1px #C5221F}
+.inp.off{background:#F7F8FA;cursor:default}
+.ph{color:#5A6475}
+.money{position:relative}
+.money .pre{position:absolute;left:12px;top:12px;font-weight:600;pointer-events:none}
+.money .inp{padding-left:28px;font-variant-numeric:tabular-nums}
+.app .hint{margin:8px 0 0;font-size:14px;line-height:20px;color:#5A6475}
+.app .msg-err{display:flex;align-items:center;gap:6px;margin:8px 0 0;font-size:14px;line-height:20px;font-weight:500;color:#C5221F}
+.caret{display:inline-block;width:2px;height:22px;margin-left:1px;background:#C25A12;vertical-align:-5px}
+.scrim{position:absolute;inset:0;background:rgba(26,32,44,.48)}
+.sheet{position:absolute;left:0;right:0;bottom:0;background:#FFFFFF;border-radius:12px 12px 0 0;box-shadow:0 -4px 16px rgba(0,0,0,.12)}
+.grab{display:flex;justify-content:center;padding-top:8px}
+.grab span{width:40px;height:4px;border-radius:999px;background:#E2E8F0}
+.app .opt{display:flex;align-items:center;gap:12px;min-height:64px;padding:8px 16px;border-bottom:1px solid #E2E8F0;color:#1A202C;text-decoration:none}
+.app .opt:hover{background:#F7F8FA;color:#1A202C}
+.app .opt.sel{background:#FDF3EA}
+.avatar{width:40px;height:40px;border-radius:999px;display:flex;align-items:center;justify-content:center;background:#FDF3EA;color:#C25A12;flex-shrink:0}
+/* calendario */
+.cal{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:4px;text-align:center}
+.cal .wd{height:32px;display:flex;align-items:center;justify-content:center;font-size:12px;line-height:16px;font-weight:500;color:#5A6475}
+.app .cal a,.cal span.d{height:44px;display:flex;align-items:center;justify-content:center;border-radius:8px;color:#1A202C;text-decoration:none;font-variant-numeric:tabular-nums}
+.app .cal a:hover{background:#FDF3EA;color:#1A202C}
+.app .cal a.sel{background:#C25A12;color:#FFFFFF;font-weight:600}
+.cal span.fut{color:#5A6475;opacity:.6}
+/* teclado numérico */
+.kbd{position:absolute;left:0;right:0;bottom:0;padding:8px 8px 24px;background:#EEF0F3;border-top:1px solid #E2E8F0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.kbd span{height:48px;display:flex;align-items:center;justify-content:center;border-radius:8px;background:#FFFFFF;box-shadow:0 1px 2px rgba(0,0,0,.06);font-size:22px;line-height:28px;font-weight:500}
+.kbd span.fn{background:transparent;box-shadow:none}
+/* computadora */
+.side{width:240px;flex-shrink:0;display:flex;flex-direction:column;padding:24px 16px;background:#FFFFFF;border-right:1px solid #E2E8F0}
+.logo{display:flex;align-items:center;gap:8px;padding:0 12px;min-height:44px;font-size:18px;line-height:26px;font-weight:600}
+.app .nav-t{padding:0 12px;margin:24px 0 8px;font-size:12px;line-height:16px;font-weight:500;color:#5A6475}
+.app .nav-i{position:relative;display:flex;align-items:center;gap:12px;min-height:44px;padding:0 12px;border-radius:8px;color:#1A202C;font-size:16px;line-height:24px;font-weight:500;text-decoration:none}
+.app .nav-i:hover{background:#F7F8FA;color:#1A202C}
+.nav-i .ic{color:#5A6475}
+.app .nav-i.on{background:#FDF3EA;color:#C25A12;font-weight:600}
+.nav-i.on .ic{color:#C25A12}
+.nav-i.on::before{content:"";position:absolute;left:0;top:10px;bottom:10px;width:3px;border-radius:0 3px 3px 0;background:#F26B1D}
+.tbl{overflow:hidden}
+.trow{display:grid;grid-template-columns:160px 240px minmax(0,1fr) 160px 24px;gap:24px;align-items:center;min-height:56px;padding:0 24px;border-top:1px solid #E2E8F0;color:#1A202C;text-decoration:none}
+.app a.trow{color:#1A202C}
+.app a.trow:hover{background:#F7F8FA;color:#1A202C}
+.thead{min-height:44px;border-top:0;font-size:12px;line-height:16px;font-weight:500;color:#5A6475}
+.tgrp{padding:8px 24px;border-top:1px solid #E2E8F0;background:#F7F8FA;font-size:14px;line-height:20px;font-weight:600;color:#5A6475}
+.panel{position:absolute;top:0;right:0;bottom:0;width:480px;background:#FFFFFF;box-shadow:-8px 0 24px rgba(0,0,0,.12);display:flex;flex-direction:column}
+.pop{position:absolute;left:0;right:0;top:100%;margin-top:4px;background:#FFFFFF;border:1px solid #E2E8F0;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,.12);z-index:2;overflow:hidden}
+.app .lk{display:flex;align-items:center;gap:16px;padding:16px;color:#1A202C;text-decoration:none}
+.app a.lk:hover{border-color:#C25A12;color:#1A202C}</style>
+</helmet>
+<div class="app" style="width: 390px; height: 844px; display: flex; flex-direction: column">
+<header class="top">
+<h1 class="t-scr">Liquidaciones</h1>
+</header>
+<main style="flex: 1; min-height: 0; overflow: hidden; padding: 16px 16px 160px; display: flex; flex-direction: column; gap: 24px">
+<div style="flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; padding: 32px 16px 96px; text-align: center">
+<span style="width: 64px; height: 64px; border-radius: 999px; display: flex; align-items: center; justify-content: center; background: #FDF3EA; color: #C25A12"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" style="width: 32px; height: 32px"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 17.5v-11"></path></svg></span>
+<p style="max-width: 300px">Todavía no hay liquidaciones.<br>Registra el primer pago.</p>
+<a class="btn btn-pri btn-lg" href="RegistrarCel.dc.html"><svg class="ic ic-s" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14"></path><path d="M12 5v14"></path></svg>Registrar liquidación</a>
+</div>
+</main>
+
+
+<nav class="bnav" aria-label="Menú principal"><a href="Main.dc.html" class="on" aria-current="page"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 2v20l2-1 2 1 2-1 2 1 2-1 2 1 2-1 2 1V2l-2 1-2-1-2 1-2-1-2 1-2-1-2 1Z"></path><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M12 17.5v-11"></path></svg>Liquidaciones</a><a href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><circle cx="18.5" cy="17.5" r="3.5"></circle><circle cx="5.5" cy="17.5" r="3.5"></circle><circle cx="15" cy="5" r="1"></circle><path d="M12 17.5V14l-3-3 4-3 2 3h2"></path></svg>Motos</a><a href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>Choferes</a><a href="#"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M22 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>Administración</a></nav>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":844}}'>
+class Component extends DCLogic {
+renderVals() {
+return {};
+}
+}
+</script>
+</body>
+</html>
