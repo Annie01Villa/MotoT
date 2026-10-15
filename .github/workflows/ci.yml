@@ -1,0 +1,72 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: web
+
+jobs:
+  calidad:
+    name: Lint, tipos y pruebas unitarias
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npm run lint
+      - run: npx tsc --noEmit
+      - run: npm run test
+
+  e2e:
+    name: Pruebas e2e (celular y computadora) + axe
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run test:e2e
+      - uses: actions/upload-artifact@v7
+        if: failure()
+        with:
+          name: playwright-test-results
+          path: web/test-results
+          retention-days: 7
+
+  docker:
+    name: Imagen de Railway (Dockerfile)
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: .
+    steps:
+      - uses: actions/checkout@v7
+      - run: docker build -t crm-motot .
+      - name: La imagen arranca y responde en /liquidaciones
+        run: |
+          docker run -d --name app -e PORT=8080 -p 8080:8080 crm-motot
+          for i in $(seq 1 30); do
+            if curl -fsS http://localhost:8080/liquidaciones > /dev/null; then echo "ok"; exit 0; fi
+            sleep 2
+          done
+          docker logs app
+          exit 1

@@ -15,3 +15,12 @@ node_modules/
 
 # Logs
 *.log
+
+# Copia comprimida del diseño (la carpeta CRM-MotoT-design/ sí va en el repo)
+CRM-MotoT-design.zip
+
+# Compilaciones y pruebas de web/
+.next/
+.next-dev/
+test-results/
+playwright-report/

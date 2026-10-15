@@ -1,0 +1,12 @@
+# Solo hace falta web/ (sin dependencias ni compilaciones locales).
+**/node_modules
+**/.next
+**/.next-dev
+**/test-results
+**/playwright-report
+**/.env*
+.git
+.github
+CRM-MotoT-design
+CRM-MotoT-design.zip
+*.md
