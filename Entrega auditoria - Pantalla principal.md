@@ -23,7 +23,7 @@ Nota técnica: aun como no modal, Radix ya hacía que Tab y Shift+Tab dieran la 
 
 | Dato | Valor |
 |---|---|
-| Repositorio | `github.com/Annie01Villa/orbita-crm` (privado), rama `main` |
+| Repositorio | `github.com/Annie01Villa/MotoT` (público), rama `main`. Railway publica desde aquí. (La versión auditada, commit `c9bf06b`, se revisó primero en `orbita-crm`; es el mismo historial.) |
 | Carpeta del código | `web/` |
 | Versión entregada | Base: commit local `a813cc7`, más las correcciones del dictamen de código, todavía sin commit. La identidad exacta está en `MANIFIESTO.md` (SHA-256 de cada archivo y del `package-lock.json`) y en `cambios-desde-a813cc7.patch` (diff completo contra la base). Nada se ha subido a GitHub; se sube cuando auditoría dé luz verde. |
 | Requisitos | Node.js 24+ |
