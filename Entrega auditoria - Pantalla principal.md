@@ -5,6 +5,18 @@
 **Fecha:** 14 oct 2026
 **Alcance:** maqueta funcional. No incluye login real, base de datos ni permisos en servidor; los registros viven en memoria y se reinician al recargar.
 
+## Respuesta al dictamen de código (No Go)
+
+| Observación | Corrección | Prueba |
+|---|---|---|
+| **Bloqueante:** en computadora, el selector y el calendario usaban un Popover no modal | `Popover.Root modal` en `web/src/components/ui/Desplegable.tsx`: foco atrapado, resto de la página oculto para lectores de pantalla (`aria-hidden`) y sin clics afuera. El selector queda modal en los dos tamaños, como el panel y la hoja de celular | e2e nueva «Tab y Shift+Tab no salen del selector de moto ni del calendario», a 390 y 1440 px: 9 pulsaciones de Tab y Shift+Tab, el resto del formulario fuera de alcance mientras está abierto y el foco regresa al campo con Escape |
+| Comprobación de la prueba | Sin `modal`, la prueba nueva **falla** en computadora; con `modal`, pasa | — |
+| **Sugerencia:** raíz de Turbopack y del tracing | `turbopack.root` y `outputFileTracingRoot` fijados a `web/` en `next.config.ts`; ya no aparece el aviso del `package-lock.json` externo | build y e2e sin ese aviso |
+
+Nota técnica: aun como no modal, Radix ya hacía que Tab y Shift+Tab dieran la vuelta dentro del desplegable (`FocusScope loop`). Lo que faltaba era el bloqueo modal: el foco por mouse o por lector de pantalla podía salir. Eso es lo que cubre ahora la prueba.
+
+**Resultados después de la corrección:** ESLint 0 · TypeScript 0 errores · Vitest 64/64 · Playwright **26/26** (1 omitida a propósito, solo corre en celular).
+
 ---
 
 ## 1. Ubicación y ejecución
@@ -13,7 +25,7 @@
 |---|---|
 | Repositorio | `github.com/Annie01Villa/orbita-crm` (privado), rama `main` |
 | Carpeta del código | `web/` |
-| Estado en git | Commits listos en local; se suben a GitHub cuando auditoría dé luz verde. El diff completo queda en el historial. |
+| Versión entregada | Base: commit local `a813cc7`, más las correcciones del dictamen de código, todavía sin commit. La identidad exacta está en `MANIFIESTO.md` (SHA-256 de cada archivo y del `package-lock.json`) y en `cambios-desde-a813cc7.patch` (diff completo contra la base). Nada se ha subido a GitHub; se sube cuando auditoría dé luz verde. |
 | Requisitos | Node.js 24+ |
 | Variables de entorno | Ninguna. `NEXT_DIST_DIR` solo la usan las pruebas e2e. No hay secretos. |
 | Migraciones de base de datos | No aplica: no hay base de datos en este alcance. |
@@ -43,7 +55,7 @@ npm run test:e2e   # Playwright a 390 y 1440 px + axe; levanta solo sus servidor
 | ESLint | 0 errores, 0 avisos |
 | TypeScript | sin errores |
 | Vitest | **64/64** pruebas pasan (6 archivos) |
-| Playwright | **24/24** pasan (celular, computadora y control en `next dev`); 1 omitida a propósito: la prueba de pestañas solo corre en celular |
+| Playwright | **26/26** pasan (celular, computadora y control en `next dev`); 1 omitida a propósito: la prueba de pestañas solo corre en celular |
 | axe | 0 violaciones críticas o serias en historial, búsqueda, sin resultados, formulario, selectores, calendario, detalle y Administración |
 | Revisión visual | capturas a 390 y 1440 px comparadas con los `.dc.html` de `04-pantallas/liquidaciones/` |
 
@@ -66,7 +78,7 @@ npm run test:e2e   # Playwright a 390 y 1440 px + axe; levanta solo sus servidor
 | Etiqueta «Nueva» | solo la última registrada; desaparece al salir de la pantalla, al registrar otra o al recargar; corregir no la pone | e2e «registrar…» |
 | Corregir la fecha la mueve de grupo | el repositorio vuelve a ordenar | `repo.test.ts`; e2e «corregir la fecha a ayer» |
 | Menú: 5 opciones en computadora; 4 botones y pestañas en celular | `src/lib/nav.ts` (lista única), `AppShell.tsx`, `Provisional.tsx`; `aria-current="page"` | `componentes.test.tsx`; e2e «menú» y «Administración → pestañas» |
-| Accesibilidad de panel, hoja, selector y calendario | Radix Dialog/Popover: foco atrapado y Escape. Foco inicial en el campo Moto, el buscador o el día elegido. El foco regresa al botón que abrió. Selector tipo combobox con flechas y Enter | e2e «teclado» (2 pruebas) y axe |
+| Accesibilidad de panel, hoja, selector y calendario | Radix Dialog y Popover **modal**: foco atrapado y Escape. Foco inicial en el campo Moto, el buscador o el día elegido. El foco regresa al botón que abrió. Selector tipo combobox con flechas y Enter | e2e «teclado» (3 pruebas, incluida Tab/Shift+Tab en el selector y el calendario) y axe |
 | Selector de sesión solo en desarrollo | `MOSTRAR_SELECTOR_SESION = NODE_ENV === "development"` | e2e contra `next build && next start` (cuenta 0) y control en `next dev` (visible) |
 | ANN-145: criterio ajustado | actualizado en Linear; ANN-145 en Done | — |
 | ANN-143 | In Progress, con comentario; queda abierta hasta conectarla con ANN-137 y ANN-138 | — |

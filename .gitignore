@@ -24,3 +24,6 @@ CRM-MotoT-design.zip
 .next-dev/
 test-results/
 playwright-report/
+
+# Paquetes para auditoría (se mandan aparte, no van al repo)
+Paquete auditoria*

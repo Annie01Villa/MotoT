@@ -18,8 +18,8 @@ function enfocarPrimerCampo(e: Event) {
 
 /**
  * Contenedor de un selector: menú desplegable bajo el campo en computadora,
- * hoja que sube desde abajo en celular. Radix se encarga del foco atrapado,
- * de Escape y de regresar el foco al campo que lo abrió.
+ * hoja que sube desde abajo en celular. En los dos casos es modal: Radix atrapa el foco
+ * (Tab y Shift+Tab no salen), cierra con Escape y regresa el foco al campo que lo abrió.
  */
 export function Desplegable({
   abierto,
@@ -38,7 +38,8 @@ export function Desplegable({
 
   if (escritorio) {
     return (
-      <Popover.Root open={abierto} onOpenChange={onAbiertoChange}>
+      // modal: el foco queda atrapado en el selector o el calendario, igual que en celular.
+      <Popover.Root open={abierto} onOpenChange={onAbiertoChange} modal>
         <Popover.Trigger asChild>{disparador}</Popover.Trigger>
         <Popover.Portal>
           <Popover.Content

@@ -236,3 +236,31 @@ test("producción: el selector de sesión no existe", async ({ page }) => {
   await expect(page.getByRole("heading", { level: 1, name: "Liquidaciones" })).toBeVisible();
   await expect(page.getByTestId("selector-sesion")).toHaveCount(0);
 });
+
+async function focoQuedaDentro(page: Page, nombre: string) {
+  const contenedor = page.getByRole("dialog", { name: nombre });
+  await expect(contenedor).toBeVisible();
+  // Modal: el resto del formulario queda fuera de alcance (oculto para lectores de pantalla).
+  await expect(page.getByRole("textbox", { name: "Monto" })).toHaveCount(0);
+  for (const tecla of ["Tab", "Tab", "Tab", "Tab", "Shift+Tab", "Shift+Tab", "Shift+Tab", "Shift+Tab", "Shift+Tab"]) {
+    await page.keyboard.press(tecla);
+    expect(await contenedor.evaluate((el) => el.contains(document.activeElement)), `${nombre}: ${tecla}`).toBe(true);
+  }
+}
+
+test("teclado: Tab y Shift+Tab no salen del selector de moto ni del calendario", async ({ page }) => {
+  await page.goto("/liquidaciones");
+  const panel = await abrirRegistrar(page);
+
+  await panel.getByRole("button", { name: /^Moto/ }).click();
+  await focoQuedaDentro(page, "Elige la moto");
+  await page.keyboard.press("Escape");
+  await expect(panel.getByRole("button", { name: /^Moto/ })).toBeFocused();
+
+  await panel.getByRole("button", { name: /^Fecha/ }).click();
+  await focoQuedaDentro(page, "Elige la fecha");
+  await page.keyboard.press("Escape");
+  await expect(panel.getByRole("button", { name: /^Fecha/ })).toBeFocused();
+  await expect(panel).toBeVisible();
+  await expect(page.getByRole("textbox", { name: "Monto" })).toHaveCount(1);
+});
